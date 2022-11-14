@@ -59,8 +59,15 @@
   "dependencies": {
     "caniuse-lite": "^1.0.30001431"
   },
-  "resolvers": {},
   "parcelIgnore": [
     "poster.jpeg"
-  ]
+  ],
+  "parcel-namer-rewrite": {
+    "hashing": "always",
+    "rules": {
+      "(.*)\\.(css)": "style.{hash}.$2",
+      "(.*)\\.(js)": "main.{hash}.$2"
+    },
+    "silent": true
+  }
 }
