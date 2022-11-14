@@ -1,0 +1,116 @@
+//*,
+//*::before,
+//*::after {
+//  margin: 0;
+//  padding: 0;
+//
+//  box-sizing: border-box;
+//
+//  //transition: $transition-default;
+//  //transition-property: background-color;
+//}
+
+html {
+  font-family: $font-family-primary, $font-family-system;
+  font-size: $base-font-size;
+  font-weight: normal;
+  font-synthesis: none;
+  text-align: left;
+  line-height: $base-font-height;
+  letter-spacing: normal;
+  color: $base-color;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+
+  scroll-behavior: smooth;
+
+  @include content-scale($contentScale);
+
+  // The width of the font is displayed differently in different browsers,
+  // it is used in order to remove the difference
+  @supports (overflow-anchor: auto) and (not (initial-letter: normal)) {
+    letter-spacing: -.35;
+  }
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: var(--header-height) 0 0;
+
+  background: var(--main-bg, $light);
+
+  cursor: default;
+}
+
+a {
+  color: var(--link-color, currentColor);
+
+  text-decoration: none;
+
+  user-select: none;
+
+  //transition: $transition-default;
+  transition-property: color;
+  cursor: pointer;
+
+  @include only-mouse {
+    &:hover {
+      color: var(--link-hover-color, $primary);
+    }
+  }
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+mark {
+  color: currentColor;
+  background: unset;
+}
+
+p {
+  max-width: var(--p-max-width, unset);
+
+  margin: var(--p-margin, 0);
+
+  font-weight: var(--p-font-weight, normal);
+  font-size: var(--p-font-size, rem(16));
+  //line-height: var(--p-line-height, 1.38);
+}
+
+*::selection {
+  background-color: $secondary;
+  color: $light;
+}
+
+.container {
+  position: var(--container-position, unset);
+
+  display: var(--container-block, flex);
+  align-items: var(--container-align-items, flex-start);
+  justify-content: var(--container-justify-content, flex-start);
+  flex-flow: var(--container-flex-flow, column);
+  gap: var(--container-gap, 0);
+
+  width: 100%;
+  max-width: var(--container-limit, auto);
+
+  padding-right: var(--container-gutter, 0);
+  padding-left: var(--container-gutter, 0);
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-height: 420px) {
+    @include phones-fit-max-evn(16px);
+  }
+}

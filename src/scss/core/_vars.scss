@@ -1,0 +1,181 @@
+//* Map size devices for media query
+$wideScreens: (
+  phonesSm: 340px,
+  phones: 480px,
+  phonesLg: 640px,
+  tablet: 768px,
+  laptop: 992px,
+  desktopSm: 1024px,
+  desktopMd: 1170px,
+  desktop: 1280px,
+  notebook: 1366px,
+  notebookLg: 1600px,
+  fullHD: 1800px,
+  retina: 2100px,
+  retina4k: 3656px,
+  retina5k: 5100px,
+  retina8k: 7600px
+);
+
+$contentScale: (
+  //(
+  //  direction: 'max-width',
+  //  wide: 1460px,
+  //  scale: 94%
+  //),
+  //(
+  //  direction: 'max-width',
+  //  wide: screens(laptop),
+  //  scale: 89%
+  //),
+  //(
+  //  direction: 'max-width',
+  //  wide: screens(phonesLg),
+  //  scale: 86%
+  //),
+  //(
+  //  direction: 'max-width',
+  //  wide: screens(phones),
+  //  scale: 80%
+  //),
+  //(
+  //  direction: 'min-width',
+  //  wide: screens(retina),
+  //  scale: 126%
+  //),
+);
+
+//* Main content && elements sizes
+$guides: false;
+$guidesBody: false;
+$guidesContainer: false;
+$guidesSideLine: true;
+$guidesContainerSpacer: true;
+$guidesContainerSpacerColor: rgba(lightgreen, 0.5);
+$guidesContainerOpacity: .6;
+$guidesCenter: true;
+$guides-color: #ff3e23;
+$guides-column: 12;
+
+$containerLimit: rem(1170);
+$containerOffset: calc(var(--container-gutter) * -1);
+$gutterSmall: var(--gutter-small, rem(8)) !default;
+$gutter: var(--gutter, rem(16)) !default;
+$gutterX2: var(--gutterX2, rem(24)) !default;
+$gutterX3: var(--gutterX3, rem(48)) !default;
+$gutterX4: var(--gutterX4, rem(96)) !default;
+$sectionSpacer: var(--section-spacer, rem(70)) !default;
+
+$radiusSmall: rem(6);
+$radius: rem(8);
+$radiusNormal: rem(16);
+$radiusLarge: rem(24);
+$radiusLargeHard: rem(48);
+
+$themes-map: (
+  default:(
+    primary: #b4fa00,
+    primary-light: #D2FF5D,
+    primary-dark: #649704,
+
+    secondary: #798ea4,
+    secondary-light: #acbac9,
+    secondary-dark: #141f29,
+
+    light: #ffffff,
+    light-dark: #f5f6fa,
+    light-darken: #EFF1F7,
+    dark: #070c10,
+    error: #ff0024,
+    //warning: #fffb53,
+    //success: #00FFBC
+  ),
+  dark: (
+  ),
+);
+
+$primary: var(--cl-primary);
+$primary-light: var(--cl-primary-light);
+$primary-dark: var(--cl-primary-dark);
+
+$secondary: var(--cl-secondary);
+$secondary-dark: var(--cl-secondary-dark);
+$secondary-light: var(--cl-secondary-light);
+
+
+$light: var(--cl-light);
+$light-dark: var(--cl-light-dark);
+$light-darken: var(--cl-light-darken);
+$dark: var(--cl-dark);
+
+$gradient-light: linear-gradient(to bottom, $light 3%, rgba(255, 255, 255, 0));
+$gradient-primary: linear-gradient(var(--gr-primary, 112deg, $light -20%, var(--cl-primary-dark) 108%));
+
+$error: var(--cl-error);
+//$warning: var(--cl-warning);
+//$success: var(--cl-success);
+
+$base-color: $secondary;
+//$border-color: var(--cl-border);
+
+//* transitions && animations
+$transition-default: 0.44s linear !default;
+$transition-function: cubic-bezier(var(--cubic-bezier, 0.645, 0.045, 0.355, 1)) !default;
+
+$animation-delay: var(--animation-delay, 0s) !default;
+$animation-duration: var(--animation-duration, 3s) !default;
+//$global-animation-state: var(--gm-play-animation, paused);
+$animation: $animation-duration $transition-function $animation-delay 1 forwards amination !default;
+
+$card-scale: scale(var(--card-scale, 1.07)) !default;
+$card-transition: transform 0.9s $transition-function !default;
+
+$base-font-color: $secondary !default;
+$base-font-size: 16px !default;
+$base-font-height: 1.4 !default;
+
+$font-family-primary: 'SF Pro Rounded' !default;
+$font-family-system: "SF Pro", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+// * shadows
+//$sh-card-primary: var(--sh-card-primary, 0 rem(10) rem(24) rem(-1) var(--cl-secondary-dark-10));
+$sh-card-primary: var(--sh-card-primary, 0 0 rem(6) 0 var(--cl-secondary-dark-10));
+$sh-card-secondary: var(--sh-card-secondary, 0 rem(5) rem(10) 0 var(--cl-secondary-dark-10));
+$sh-card-tertiary: var(--sh-card-tertiary, 0 rem(2) rem(24) 0 var(--cl-secondary-dark-10));
+$sh-card-forty: 0 0 rem(40) 0 rgba(0, 0, 0, 0.08);
+
+//* Icons
+$font-path: '../assets/fonts' !default;
+
+$icon-font-family: "kasi-icons" !default;
+$icon-font-prefix: 'ksi-';
+$icon-font-path: $font-path + '/#{$icon-font-family}' !default;
+
+
+$icons-font-map: (
+);
+
+//* Scrolls
+$scroll-size: var(--scroll-size, rem(5));
+$scroll-border-radius: 0;
+$scroll-thumb-color: $primary;
+$scroll-thumb-hover-color: $primary-dark;
+$scroll-track-color: $light;
+$scroll-track-line: inset 0 0 0 0px $scroll-track-color;
+
+//* cursor
+$cursor-size: rem(30);
+$cursor-color: $secondary;
+$cursor-color-active: $primary-dark;
+
+//* Loader
+$loader-size: rem(48);
+
+//* z-index
+$z-index-step: 10 !default;
+$z-index: (
+  start: 10,
+  middle: 50,
+  header: 100,
+  modal: 1000
+) !default;

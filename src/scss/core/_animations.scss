@@ -1,0 +1,11 @@
+@include keyframes(amination) {
+  0% {
+    opacity: var(--amination-opacity-start, 0);
+    transform: var(--amination-transform-start, translate(-100vw, 0));
+  }
+
+  100% {
+    opacity: var(--amination-opacity-end, 1);
+    transform: var(--amination-transform-end, translate(0, 0));
+  }
+}

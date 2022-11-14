@@ -1,0 +1,20 @@
+{
+  "extends": "@parcel/config-default",
+  "resolvers": [
+    "parcel-resolver-ignore",
+    "@parcel/resolver-glob",
+    "..."
+  ],
+  "namers": [
+    "parcel-namer-rewrite",
+    "..."
+  ],
+  "optimizers": {
+    "*.js": [ "@parcel/optimizer-esbuild" ],
+    "*.html": [ "@parcel/optimizer-htmlnano" ]
+  },
+ "transformers": {
+    "*.mp4" : [ "@parcel/transformer-raw" ],
+    "favicon.ico" : [ "@parcel/transformer-raw" ]
+  },
+}

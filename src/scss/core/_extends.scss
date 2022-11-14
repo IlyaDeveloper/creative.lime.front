@@ -1,0 +1,92 @@
+
+%section-default {
+  min-height: rem(668);
+
+  padding: calc(#{$gutterX3} + #{$gutterX2}) 0;
+}
+
+%section-limit {
+  --container-limit: calc(#{rem(992)} + (#{$gutterX2} * 2));
+}
+
+%section-animation-up {
+  --amination-transform-start: translate(0, 10%);
+
+  animation: $animation;
+}
+
+%card {
+  @extend %text-large-title;
+
+  --p-font-size: none;
+  --p-line-height: none;
+
+  display: flex;
+
+  min-height: rem(450);
+  height: 100%;
+
+  padding: var(--card-gutter-y, rem(60)) var(--card-gutter-x, rem(48));
+
+  border-radius: $radiusLargeHard;
+  background-color: $light;
+}
+
+%caption-large {
+  font-size: var(--h1-size, rem(48));
+  line-height: 1.28;;
+  font-weight: var(--h1-weight, 900);
+}
+
+%h1 {
+  font-size: var(--h1-size, rem(44));
+  line-height: 1.28;
+  font-weight: var(--h1-weight, 700);
+}
+
+%h2 {
+  font-size: var(--h2-size, rem(38));
+  font-weight: var(--h2-weight, 700);
+}
+
+%h3 {
+  font-size: var(--h3-size, rem(32));
+  font-weight: var(--h3-weight, 800);
+}
+
+%h4 {
+  font-size: var(--h4-size, rem(28));
+  font-weight: bold;
+}
+
+%h5 {
+  font-size: var(--h5-size, rem(24));
+  font-weight: bold;
+}
+
+%h6 {
+  font-size: var(--h6-size, rem(20));
+  font-weight: bold;
+}
+
+%text-large-title {
+  font-size: rem(22);
+  font-weight: 600;
+}
+
+%text-large {
+  font-size: rem(20);
+  font-weight: 500;
+}
+
+%text-normal {
+  font-size: rem(16);
+}
+
+%text-small {
+  font-size: rem(14);
+}
+
+%text-hard-small {
+  font-size: rem(12);
+}

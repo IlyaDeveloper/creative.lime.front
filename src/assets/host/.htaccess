@@ -1,0 +1,30 @@
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+Header add Access-Control-Allow-Headers: "Origin, Content-Type, Accept, Authorization, X-Request-With"
+Header append Vary "Accept-Encoding"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header set X-Content-Type-Options "nosniff"
+
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+  Header set Cache-Control "max-age=31536000"
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+<IfModule mod_negotiation.c>
+    Options -MultiViews -Indexes
+</IfModule>
+
+RewriteEngine On
+
+RewriteBase /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+RewriteCond %{REQUEST_URI} !(\.[^./]+)$
+RewriteCond %{REQUEST_fileNAME} !-d
+RewriteCond %{REQUEST_fileNAME} !-f
+RewriteRule (.*) /$1.html
+
+# Force 404
+#RewriteRule ^ - [R=404,L]
+ErrorDocument 404 https://creativelime.justtwic.art/404
+ErrorDocument 500 https://creativelime.justtwic.art

@@ -1,0 +1,8 @@
+mixin button(className, caption, link, target)
+
+  if !link
+    button.button(class=className type="button")
+      =caption
+  else
+    a.button(class=className href=link target=target)
+      =caption

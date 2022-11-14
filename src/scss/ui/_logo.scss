@@ -1,0 +1,25 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+
+  width: rem(75);
+  height: rem(28);
+
+  color: var(--logo-color, $secondary-dark);
+
+  font-size: rem(28);
+  font-weight: 800;
+
+  transition: color $transition-default;
+
+  svg {
+    flex: 1 1;
+    fill: currentColor;
+  }
+
+  &.--large {
+    --logo-icon-size: #{rem(43)};
+
+    font-size: rem(31);
+  }
+}

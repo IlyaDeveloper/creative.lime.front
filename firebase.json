@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "emulators": {
+    "hosting": {
+      "port": 5330
+    },
+    "ui": {
+      "enabled": true
+    }
+  },
+  "appAssociation": "AUTO",
+  "rewrites": [
+    {
+      "source": "/join/**",
+      "dynamicLinks": true
+    }
+  ]
+}

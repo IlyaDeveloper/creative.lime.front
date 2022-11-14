@@ -1,0 +1,17 @@
+{
+  "minifySvg": {
+    "plugins": [
+      {
+        "name": 'preset-default',
+        "params": {
+          "overrides": {
+            "removeHiddenElems": false,
+            "moveGroupAttrsToElems": false,
+            "moveElemsAttrsToGroup": false,
+            "mergePaths": false
+          }
+        }
+      }
+    ]
+  }
+}

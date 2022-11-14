@@ -1,0 +1,66 @@
+{
+  "name": "Creative Lime",
+  "description": "limecreative.com",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "Pashchuk Ilya",
+  "license": "ISC",
+  "source": "src/pug/pages/*.pug ",
+  "targets": {
+    "default": {
+      "distDir": "./dist"
+    }
+  },
+  "scripts": {
+    "clean-dist": "rm -rf dist && mkdir dist",
+    "copy-img": "cp -vR src/assets/images ./dist",
+    "copy-data": "cp -r src/data.json dist",
+    "copy-seo": "cp -r src/assets/seo/* dist",
+    "copy-assets": "cp -r src/assets/* dist",
+    "copy-files": "npm run copy-img & npm run copy-assets & npm run copy-data",
+    "copy-host-files": "cp -r src/assets/host/* ./dist",
+    "precompile": "npm run clean-dist && npm run copy-seo && npm run copy-downloads",
+    "start": "npm run precompile  && parcel src/pug/pages/*.pug --open",
+    "build": "npm run precompile && parcel build src/pug/pages/*.pug --no-source-maps --public-url='./'",
+    "build-map": "npm run precompile && build src/pug/pages/*.pug --public-url='./'",
+    "deploy": "sshpass -p ${npm_config_deploy_ssh_password} rsync -avz --delete -e 'ssh -p '${npm_config_deploy_ssh_port} ./dist/ ${npm_config_deploy_ssh_server}:${npm_config_deploy_ssh_path}"
+  },
+  "devDependencies": {
+    "@parcel/optimizer-data-url": "^2.8.0",
+    "@parcel/optimizer-esbuild": "^2.8.0",
+    "@parcel/optimizer-htmlnano": "^2.8.0",
+    "@parcel/packager-raw-url": "^2.8.0",
+    "@parcel/resolver-glob": "^2.8.0",
+    "@parcel/transformer-image": "^2.6.0",
+    "@parcel/transformer-inline-string": "^2.8.0",
+    "@parcel/transformer-jsonld": "^2.8.0",
+    "@parcel/transformer-pug": "^2.8.0",
+    "@parcel/transformer-sass": "^2.8.0",
+    "@parcel/transformer-webmanifest": "^2.8.0",
+    "autoprefixer": "^10.4.13",
+    "browserslist": "^4.21.4",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.13",
+    "firebase-tools": "^11.8.0",
+    "parcel": "^2.8.0",
+    "parcel-namer-rewrite": "^2.0.0-rc.3",
+    "parcel-plugin-metaimage": "^1.2.4",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "parcel-resolver-ignore": "^2.1.3",
+    "postcss": "^8.4.16",
+    "posthtml-img-autosize": "^0.1.6",
+    "posthtml-include": "^1.7.4",
+    "posthtml-modules": "^0.9.0",
+    "rsync": "^0.6.1",
+    "sass": "^1.56.1",
+    "scss": "^0.2.4",
+    "swiper": "^8.3.2"
+  },
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001431"
+  },
+  "resolvers": {},
+  "parcelIgnore": [
+    "poster.jpeg"
+  ]
+}
