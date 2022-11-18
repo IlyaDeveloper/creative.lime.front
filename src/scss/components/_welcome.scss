@@ -1,3 +1,71 @@
 .welcome {
+  $welcome-video-offset: -24vh;
 
+  @extend %section-default;
+
+  --container-align-items: center;
+  --container-justify-content: center;
+  --container-gap: #{$gutterX2};
+
+  --logo-size: #{rem(195)};
+
+  --caption-inset-color: #{$primary};
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: calc(90vh - #{var(--header-height)});
+
+  text-align: center;
+
+  &__logo {
+    position: absolute;
+    inset: rem(31) 50% auto auto;
+
+    transform: translate(50%, 0);
+  }
+
+  &__sub-text {
+    @extend %text-large-title;
+  }
+
+  &__beck {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 4.5vw;
+  }
+
+  &__video {
+    width: 18.6vw; //rem(283)
+    height: 27vw; //rem(405)
+    //height: max-content;
+    //aspect-ratio: 3 / 5;
+
+    margin: $welcome-video-offset 0 0;
+
+    border: rem(3) solid $primary;
+    border-radius: $radiusLarge;
+
+    background: transparent;
+
+    overflow: hidden;
+
+    &:last-child {
+      margin: 0 0 $welcome-video-offset;
+
+
+      border-color: $secondary;
+
+      transform: scale(0.85);
+    }
+
+  }
 }

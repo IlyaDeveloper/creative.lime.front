@@ -3,7 +3,7 @@
   --container-limit: #{$containerLimit};
   --container-gutter: #{$gutterX2};
 
-  --header-height: #{rem(60)};
+  --header-height: #{rem(57)};
 
   @include generate-themes($themes-map);
 

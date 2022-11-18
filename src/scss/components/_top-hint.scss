@@ -1,0 +1,16 @@
+.top-hint {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: z-index(header);
+
+  padding: rem(17);
+  min-height: rem(57);
+
+  font-weight: 600;
+  font-size: rem(15);
+  line-height: 120%;
+  color: $light;
+  text-align: center;
+
+  background: $secondary;
+}

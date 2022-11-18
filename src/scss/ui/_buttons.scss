@@ -6,19 +6,30 @@
   align-items: center;
   justify-content: center;
 
-  min-height: var(--button-height, rem(36));
+  min-height: var(--button-height, rem(60));
 
   padding: var(--button-gutter-y, rem(10)) var(--button-gutter-x, rem(24));
 
   font-weight: bold;
-  font-size: var(--button-size, rem(16));
-  color: var(--button-color, $secondary-dark);
+  font-size: var(--button-size, rem(23));
+  color: var(--button-color, $light);
 
   touch-action: none;
   outline: unset;
 
-  border-radius: var(--button-radius, rem(36));
-  background: var(--button-fill, $primary);
+  border-radius: var(--button-radius, $radius);
+  background: var(--button-fill, $secondary);
+
+  &:not(.--not-hand) {
+    &:before {
+      margin: auto rem(12) auto rem(-5);
+
+      content: '👉';
+
+      font-size: rem(33);
+      line-height: 1;
+    }
+  }
 
   @include only-mouse {
     transition: .5s linear;
@@ -26,8 +37,8 @@
     cursor: pointer;
 
     &:hover {
-      --button-fill: var(--button-fill-hover, #{$secondary-dark});
-      --button-color: var(--button-color-hover, #{$light});
+      --button-fill: var(--button-fill-hover, #{$primary});
+      --button-color: var(--button-color-hover, #{$secondary-dark});
       --link-hover-color: var(--button-color);
 
       --link-round-arrow-transform: rotate(-180deg) scale(0.8);

@@ -1,13 +1,23 @@
+-
+  var
+          WELCOME_SUB_TEXT_1 = "Want to grow your e-com brand?",
+          WELCOME_TITLE = "Get UGC Ad Creatives <br> <span>That Convert<span>",
+          WELCOME_SUB_TEXT_2 = "Done-for-you on autopilot",
+          WELCOME_BUTTON = "Done-for-you on autopilot",
+          WELCOME_TEXT = "Only $100 per video"
+
 section.welcome
   .container
-    p Want to grow your e-com brand?
+    .welcome__logo
+      +logo
+    p.welcome__sub-text=WELCOME_SUB_TEXT_1
+    h1(class="caption --large")!=WELCOME_TITLE
+    p.welcome__sub-text=WELCOME_SUB_TEXT_2
+    +button(null,WELCOME_BUTTON, null, null)
+    p.welcome__text=WELCOME_TEXT
 
-    h1(class="caption --large") Get UGC Ad Creatives
-      br
-      span That Convert
-
-    p Done-for-you on autopilot
-
-    +button(null,'Done-for-you on autopilot', null, null)
-
-    p Only $100 per video
+    .welcome__beck
+      video.welcome__video(preload="metadate" controls=false)
+        source(src=assetsVideoPath + "video.mp4" type="video/mp4")
+      video.welcome__video(preload="metadate" controls=false)
+          source(src=assetsVideoPath + "video.mp4" type="video/mp4")

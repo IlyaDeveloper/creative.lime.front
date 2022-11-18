@@ -1,0 +1,24 @@
+.caption {
+  @extend %h1;
+
+  margin: var(--caption-margin, unset);
+  font-family: var(--caption-font, $font-family-secondary);
+  font-weight: var(--caption-wight, 400);
+  color: var(--caption-color, currentColor);
+
+  & > * {
+    color: var(--caption-inset-color, currentColor);
+  }
+
+  &.--large {
+    @extend %caption-large;
+  }
+
+  &.--2 {
+    @extend %h2;
+  }
+
+  //&.--3 {
+  //  @extend %h3;
+  //}
+}

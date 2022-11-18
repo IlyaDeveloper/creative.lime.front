@@ -37,8 +37,6 @@ $guidesCenter: true;
 $guides-color: #ff3e23;
 $guides-column: 12;
 
-$containerLimit: rem(1170);
-$containerOffset: calc(var(--container-gutter) * -1);
 $gutterSmall: var(--gutter-small, rem(8)) !default;
 $gutter: var(--gutter, rem(16)) !default;
 $gutterX2: var(--gutterX2, rem(24)) !default;
@@ -46,11 +44,13 @@ $gutterX3: var(--gutterX3, rem(48)) !default;
 $gutterX4: var(--gutterX4, rem(96)) !default;
 $sectionSpacer: var(--section-spacer, rem(70)) !default;
 
-$radiusSmall: rem(6);
-$radius: rem(8);
-$radiusNormal: rem(16);
-$radiusLarge: rem(24);
-$radiusLargeHard: rem(48);
+$containerLimit: calc(#{rem(1310)} + #{$gutterX2});
+$containerOffset: calc(var(--container-gutter) * -1);
+
+//$radiusSmall: rem(10);
+$radius: rem(20);
+$radiusLarge: rem(28);
+//$radiusLargeHard: rem(48);
 
 $themes-map: (
   default:(
@@ -84,7 +84,7 @@ $error: var(--cl-error);
 //$warning: var(--cl-warning);
 //$success: var(--cl-success);
 
-$base-color: $secondary;
+$base-color: $light;
 //$border-color: var(--cl-border);
 
 //* transitions && animations
@@ -103,8 +103,9 @@ $base-font-color: $secondary !default;
 $base-font-size: 16px !default;
 $base-font-height: 1.4 !default;
 
-$font-family-primary: 'SF Pro Rounded' !default;
-$font-family-system: "SF Pro", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-primary: 'Poppins' !default;
+$font-family-secondary: 'Coolvetica' !default;
+$font-family-system: $font-family-primary, $font-family-secondary, -apple-system, BlinkMacSystemFont, Arial, Roboto sans-serif !default;
 
 // * shadows
 //$sh-card-primary: var(--sh-card-primary, 0 rem(10) rem(24) rem(-1) var(--cl-secondary-dark-10));
