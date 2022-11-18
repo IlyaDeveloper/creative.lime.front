@@ -22,27 +22,7 @@ $contentScale: (
   //  direction: 'max-width',
   //  wide: 1460px,
   //  scale: 94%
-  //),
-  //(
-  //  direction: 'max-width',
-  //  wide: screens(laptop),
-  //  scale: 89%
-  //),
-  //(
-  //  direction: 'max-width',
-  //  wide: screens(phonesLg),
-  //  scale: 86%
-  //),
-  //(
-  //  direction: 'max-width',
-  //  wide: screens(phones),
-  //  scale: 80%
-  //),
-  //(
-  //  direction: 'min-width',
-  //  wide: screens(retina),
-  //  scale: 126%
-  //),
+  //)
 );
 
 //* Main content && elements sizes
@@ -74,36 +54,27 @@ $radiusLargeHard: rem(48);
 
 $themes-map: (
   default:(
-    primary: #b4fa00,
-    primary-light: #D2FF5D,
-    primary-dark: #649704,
-
-    secondary: #798ea4,
-    secondary-light: #acbac9,
-    secondary-dark: #141f29,
-
+    primary: #E1F500,
+    secondary: #8235FF,
+    secondary-dark: #250C59,
+    tertiary: #6C63FF,
+    quaternary: #717171,
     light: #ffffff,
-    light-dark: #f5f6fa,
-    light-darken: #EFF1F7,
-    dark: #070c10,
-    error: #ff0024,
+    dark: #000000,
   ),
   dark: (
   ),
 );
 
 $primary: var(--cl-primary);
-$primary-light: var(--cl-primary-light);
-$primary-dark: var(--cl-primary-dark);
 
 $secondary: var(--cl-secondary);
 $secondary-dark: var(--cl-secondary-dark);
-$secondary-light: var(--cl-secondary-light);
 
+$tertiary: var(--tertiary);
+$quaternary: var(--tertiary);
 
 $light: var(--cl-light);
-$light-dark: var(--cl-light-dark);
-$light-darken: var(--cl-light-darken);
 $dark: var(--cl-dark);
 
 $gradient-light: linear-gradient(to bottom, $light 3%, rgba(255, 255, 255, 0));
@@ -137,18 +108,15 @@ $font-family-system: "SF Pro", -apple-system, BlinkMacSystemFont, Roboto, "Helve
 
 // * shadows
 //$sh-card-primary: var(--sh-card-primary, 0 rem(10) rem(24) rem(-1) var(--cl-secondary-dark-10));
-$sh-card-primary: var(--sh-card-primary, 0 0 rem(6) 0 var(--cl-secondary-dark-10));
-$sh-card-secondary: var(--sh-card-secondary, 0 rem(5) rem(10) 0 var(--cl-secondary-dark-10));
-$sh-card-tertiary: var(--sh-card-tertiary, 0 rem(2) rem(24) 0 var(--cl-secondary-dark-10));
+$sh-card-primary: var(--sh-card-primary, #{0 0 rem(6) 0 var(--cl-secondary)});
 $sh-card-forty: 0 0 rem(40) 0 rgba(0, 0, 0, 0.08);
 
 //* Icons
 $font-path: '../assets/fonts' !default;
 
-$icon-font-family: "kasi-icons" !default;
-$icon-font-prefix: 'ksi-';
+$icon-font-family: "lime-icons" !default;
+$icon-font-prefix: 'lmi-';
 $icon-font-path: $font-path + '/#{$icon-font-family}' !default;
-
 
 $icons-font-map: (
 );
@@ -157,14 +125,14 @@ $icons-font-map: (
 $scroll-size: var(--scroll-size, rem(5));
 $scroll-border-radius: 0;
 $scroll-thumb-color: $primary;
-$scroll-thumb-hover-color: $primary-dark;
+$scroll-thumb-hover-color: $secondary;
 $scroll-track-color: $light;
 $scroll-track-line: inset 0 0 0 0px $scroll-track-color;
 
 //* cursor
 $cursor-size: rem(30);
 $cursor-color: $secondary;
-$cursor-color-active: $primary-dark;
+$cursor-color-active: $secondary-dark;
 
 //* Loader
 $loader-size: rem(48);

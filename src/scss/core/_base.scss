@@ -28,12 +28,6 @@ html {
   scroll-behavior: smooth;
 
   @include content-scale($contentScale);
-
-  // The width of the font is displayed differently in different browsers,
-  // it is used in order to remove the difference
-  @supports (overflow-anchor: auto) and (not (initial-letter: normal)) {
-    letter-spacing: -.35;
-  }
 }
 
 body {

@@ -4,72 +4,10 @@
   --container-gutter: #{$gutterX2};
 
   --header-height: #{rem(60)};
-  //--alert-height: #{rem(40)};
 
   @include generate-themes($themes-map);
 
   @include use-theme-name(dark) {
-    --gr-primary: #{112deg, #7cff67 -20%, #00e301 108%};
-    --gr-secondary: #{162deg, rgba(#fff, 0.82) 5%, #fff 72%};
-
-    --border-shadow: #{0 0 0 1px var(--cl-secondary-dark-10)};
-
-    --button-color: #{$light};
-    --button-color-hover: #{$light};
-    --button-fill: #{$primary};
-    --button-fill-store-hover: #{$tertiary};
-    --button-fill-hover: #{$tertiary};
-    --button-coming-stiker-color: #{$light};
-
-    --phone-after-fill: #fff;
-    --phone-border-color: #{#fff};
-
-    --credit-cart-fill-light: #{$secondary-dark};
-    --credit-cart-fill-dark: #{$light};
-
-    --link-hover-color: #{$tertiary} !important;
-    --logo-color: #{$primary};
-
-    --help-card-border-color: #{$primary};
-
-    --benefits-color: #{$light};
-    --benefits-icon-fill: #{$tertiary};
-    --benefits-sahdow: #{0 0 0 1px var(--cl-secondary-dark-10)};
-
-    --get-now-border-color: none;
-    --get-now-avatars-overflow: none;
-
-    --safety-card-shadow: var(--border-shadow);
-    --swipe-card-shadow: var(--border-shadow);
-    --available-card-sahdow: var(--border-shadow);
-    --send-card-shadow: var(--border-shadow);
-    --still-questions-sahdow: var(--border-shadow);
-    --faq-popular-card-shadow: var(--border-shadow);
-    --proof-platform-card-shadow: var(--border-shadow);
-    --instantly-card-shadow: var(--border-shadow);
-    --context-menu-shadow: var(--border-shadow);
-
-    --consent-link-color: #{$tertiary};
-    --consent-link-hover-color: #{var(--cl-quaternary)};
-
-    --download-fill: #{rgba(#56e254, 0.7)};
-    --download-hint-border-color: #{$secondary-dark};
-    --download-button-fill: #{$secondary-dark};
-    --download-button-coming-fill: #{$secondary-dark};
-    --download-button-coming-pash-color: #{$light};
-
-    --sh-card-primary: #{0 rem(0) rem(0) 1px var(--cl-secondary-dark-10)};
-    --sh-card-secondary: #{0 rem(0) rem(0) -1px var(--cl-secondary-dark-10)};
-    --sh-card-tertiary: var(--border-shadow);
-
-    --footer-color: #{$secondary-dark};
-    --footer-fill: #{$light-dark};
-
-    --collapse-toggler-color: #{$primary};
-    --collapse-toggler-bg-color: #{$light};
-    --collapse-toggler-color-hover: #{$light};
-    --collapse-toggler-bg-hover: #{$primary};
-    //--collapse-capt-color: #{$primary};
   }
 
   @include max-wide(phonesLg) {

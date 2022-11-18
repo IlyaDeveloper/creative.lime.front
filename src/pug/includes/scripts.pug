@@ -10,3 +10,16 @@ if googleAnalytics
     gtag('config', '#{googleAnalyticsID}');
 
 script(type="module", src=sourcePathJS)
+
+script(type='application/ld+json').
+  { "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Creative Lime",
+    "url":"https://creative-lime.com/",
+    "sameAs":[
+      "https://www.facebook.com/creative-lime",
+      "https://www.instagram.com/creative-lime",
+      "https://twitter.com/creative-lime",
+      "https://www.linkedin.com/company/creative-lime"
+    ]
+  }

@@ -6,35 +6,50 @@
               description: "Researching the trends, your competitors, your target group, their problems, their dreams and deepest desires. Coming up with ad concepts. Transforming scrolling users into customers that will purchase your product.",
               pictures: [
                 {
-                  src: '',
-                  into: ''
-                }]
+                  src: 'team-3.png',
+                  into: 'team-3.png'
+                },
+                {
+                  src: 'team.png',
+                  into: 'team.png'
+                },
+              ]
             },
             {
               name: "Video Editors",
               description: "Making sure all your videos can be watched on mute.  Making your videos easy to coprehend by using smart captions. Adding trending transitions, music, outros and exporting in all relevant formats.",
               pictures: [
                 {
-                  src: '',
-                  into: ''
-                }]
+                  src: 'team-4.png',
+                  into: 'team-4.png'
+                },
+                {
+                  src: 'team-1.png',
+                  into: 'team-1.png'
+                }
+              ]
             },
             {
               name: "Project managers",
               description: "Making sure that everything that comes in is of the highest quality and of course... on time!",
               pictures: [
                 {
-                  src: '',
-                  into: ''
-                }]
+                  src: 'team-5.png',
+                  into: 'team-5.png'
+                },
+                {
+                  src: 'team-2.png',
+                  into: 'team-2.png'
+                }
+              ]
             },
             {
               name: "Content Creators (actors)",
               description: "We have vetted content creatos in the USA, UK, Australia, Canada and Europe. Each of the creators we work with has gone through specialized training, so that you recieve the highest-quality UGC’s.",
               pictures: [
                 {
-                  src: '',
-                  into: ''
+                  src: 'map.svg',
+                  into: 'map.svg'
                 }]
             },
           ]
@@ -48,7 +63,7 @@ section.team
         figure.team__item-pics
           each pic in item.pictures
             picture.team__item-ava
-              img(src=pic.src, alt=pic.into)
+              img(src=assetsImgPath + pic.src, alt=pic.into)
         h2=item.name
         p=item.description
 

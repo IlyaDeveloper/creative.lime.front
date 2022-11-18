@@ -20,8 +20,8 @@
     "copy-files": "npm run copy-img & npm run copy-assets & npm run copy-data",
     "copy-host-files": "cp -r src/assets/host/* ./dist",
     "precompile": "npm run clean-dist && npm run copy-seo && npm run copy-downloads",
-    "start": "npm run precompile  && parcel src/pug/pages/*.pug --open",
-    "build": "npm run precompile && parcel build src/pug/pages/*.pug --no-source-maps --public-url='./'",
+    "start": "parcel src/pug/pages/*.pug",
+    "build": "npm run precompile && parcel build src/pug/pages/index.pug --no-source-maps --public-url='./'",
     "build-map": "npm run precompile && build src/pug/pages/*.pug --public-url='./'",
     "deploy": "sshpass -p ${npm_config_deploy_ssh_password} rsync -avz --delete -e 'ssh -p '${npm_config_deploy_ssh_port} ./dist/ ${npm_config_deploy_ssh_server}:${npm_config_deploy_ssh_path}"
   },
@@ -41,7 +41,6 @@
     "browserslist": "^4.21.4",
     "cross-env": "^7.0.3",
     "cssnano": "^5.1.13",
-    "firebase-tools": "^11.8.0",
     "parcel": "^2.8.0",
     "parcel-namer-rewrite": "^2.0.0-rc.3",
     "parcel-plugin-metaimage": "^1.2.4",
