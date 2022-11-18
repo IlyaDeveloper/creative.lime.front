@@ -1,7 +1,25 @@
+-
+  var
+          TUSTED_CAPTION = "Tusted by huge performers",
+          TUSTED_TEXT = "and more than 100 other successfull e-com brands",
+          TUSTED_LOGOS = [
+            {
+              logo: 'trusted-1.png',
+              alt: 'mango'
+            },
+            {
+              logo: 'trusted-2.png',
+              alt: 'the ordinary'
+            },
+          ]
+
 section.tusted
   .container
-    h3(class="caption --3") Tusted by huge performers
+    h3(class="caption --2")=TUSTED_CAPTION
 
     .tusted__logos
+      each item in TUSTED_LOGOS
+        picture
+          img(src=assetsImgPath + item.logo  alt=item.alt)
 
-    p and more than 100 other successfull e-com brands
+    p=TUSTED_TEXT
