@@ -1,6 +1,8 @@
 .welcome {
   $welcome-video-offset: -24vh;
 
+  --amination-transform-start: #{translate(0, -10%)};
+
   @extend %section-default;
 
   --container-align-items: center;
@@ -12,6 +14,7 @@
   --caption-inset-color: #{$primary};
 
   position: relative;
+  z-index: 1;
 
   display: flex;
   align-items: center;
@@ -19,6 +22,12 @@
   min-height: calc(90vh - #{var(--header-height)});
 
   text-align: center;
+
+  border-radius: 0 0 $radiusLargeHard $radiusLargeHard;
+  background: $secondary-dark;
+  box-shadow: 0 rem(10) rem(30) rem(-15) $secondary-dark;
+
+  animation: $animation;
 
   &__logo {
     position: absolute;
@@ -44,6 +53,9 @@
   }
 
   &__video {
+    //--amination-opacity-start: #{0};
+    --amination-transform-start: #{translate(-20vw, 0) scale(0)};
+
     position: relative;
 
     display: inline-flex;
@@ -61,9 +73,13 @@
 
     background: transparent;
 
+    animation: $animation;
+
     overflow: hidden;
 
     &:last-child {
+      --amination-transform-start: #{translate(20vw, 0) scale(0)};
+
       margin: 0 0 $welcome-video-offset;
 
       border-color: $secondary;

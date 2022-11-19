@@ -1,7 +1,9 @@
 .creatives {
   @extend %section-default;
 
+  --container-limit: auto;
   --container-align-items: center;
+
   --caption-max: #{rem(795)};
 
   --p-max-width: #{rem(1000)};
@@ -11,21 +13,8 @@
   display: flex;
   justify-content: center;
 
-  text-align: center;
-
   &__wrap {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    gap: rem(20);
-
-    padding: rem(70) 12.5vw rem(50);
-
-    border: rem(8) solid #8235ff36;
-    border-radius: $radiusLargeHard;
-    box-shadow: $sh-card-primary;
-
-    background: #13003899; // $quaternary;
+    @extend %card;
   }
 
   &__icon {
@@ -38,5 +27,4 @@
   strong {
     color: $primary;
   }
-
 }

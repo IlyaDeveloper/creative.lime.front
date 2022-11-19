@@ -9,11 +9,12 @@
   --caption-max: #{100%};
   --caption-inset-color: #{$primary};
 
+  text-align: center;
+
   &__item {
     display: flex;
     flex-flow: column;
     flex: 1 0;
-    //min-width: rem(340);
   }
 
   &__pics {
@@ -35,16 +36,16 @@
   &__card {
     display: inline-grid;
     grid-auto-rows: max-content auto;
-    gap: rem(20);
+    gap: rem(8);
 
     height: 100%;
 
     margin: rem(16) 0 0;
     padding: rem(28);
 
-    font-weight: 400;
-    font-size: rem(22);
-    //line-height: 26px;
+    //font-weight: 400;
+    //font-size: rem(20);
+    text-align: left;
 
     border: rem(3) solid $primary;
     border-radius: $radiusLarge;

@@ -13,26 +13,44 @@
   animation: $animation;
 }
 
-//%card {
-//  @extend %text-large-title;
-//
-//  --p-font-size: none;
-//  --p-line-height: none;
-//
-//  display: flex;
-//
-//  min-height: rem(450);
-//  height: 100%;
-//
-//  padding: var(--card-gutter-y, rem(60)) var(--card-gutter-x, rem(48));
-//
-//  border-radius: $radiusLargeHard;
-//  background-color: $light;
-//}
+%fix-fill-on-scroll-down {
+  &:after {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: -1;
+
+    width: 100vw;
+    height: 30vh;
+    min-height: rem(200, $base-font-size);
+
+    content: '';
+
+    background: linear-gradient(to top, $primary 40%, transparent);
+  }
+}
+
+%card {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: rem(20);
+
+  padding: rem(70) 12.5vw rem(50);
+
+  text-align: center;
+
+  border: rem(8) solid #8235ff36;
+  border-radius: $radiusLargeHard;
+  box-shadow: $sh-card-primary;
+
+  background: #13003899; // $quaternary;
+}
 
 %caption-large {
   font-size: var(--h1-size, rem(70));
-  line-height: var(--h1-height, rem(84));
+  line-height: var(--h1-height, 112%);
   //font-weight: var(--h1-weight, 400);
 }
 

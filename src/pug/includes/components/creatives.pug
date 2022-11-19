@@ -6,12 +6,13 @@
           CREATIVES_TEXT_DOWN = "Only $100 per video"
 
 section.creatives
-  .creatives__wrap
-    h2.caption=CREATIVES_TITLE
+  .container
+    .creatives__wrap
+      h2.caption=CREATIVES_TITLE
 
-    mark.creatives__icon 🙅
+      mark.creatives__icon 🙅
 
-    p!=CREATIVES_TEXT
+      p!=CREATIVES_TEXT
 
-    +button(null, CREATIVES_BUTTON, null, null)
-    span=CREATIVES_TEXT_DOWN
+      +button(null, CREATIVES_BUTTON, null, null)
+      span=CREATIVES_TEXT_DOWN

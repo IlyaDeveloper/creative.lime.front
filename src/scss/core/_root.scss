@@ -5,6 +5,8 @@
 
   --header-height: #{rem(57)};
 
+  --main-bg: #{$secondary-dark};
+
   @include generate-themes($themes-map);
 
   @include use-theme-name(dark) {

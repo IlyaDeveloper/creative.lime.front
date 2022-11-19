@@ -1,4 +1,7 @@
 .top-hint {
+  //--amination-opacity-start: #{0};
+  --amination-transform-start: #{translate(0, -40%)};
+
   position: fixed;
   inset: 0 0 auto;
   z-index: z-index(header);
@@ -13,4 +16,6 @@
   text-align: center;
 
   background: $secondary;
+
+  animation: $animation;
 }

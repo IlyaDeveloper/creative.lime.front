@@ -92,7 +92,7 @@ $transition-default: 0.44s linear !default;
 $transition-function: cubic-bezier(var(--cubic-bezier, 0.645, 0.045, 0.355, 1)) !default;
 
 $animation-delay: var(--animation-delay, 0s) !default;
-$animation-duration: var(--animation-duration, 3s) !default;
+$animation-duration: var(--animation-duration, 1.6s) !default;
 //$global-animation-state: var(--gm-play-animation, paused);
 $animation: $animation-duration $transition-function $animation-delay 1 forwards amination !default;
 

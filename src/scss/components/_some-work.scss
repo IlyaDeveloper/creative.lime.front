@@ -1,6 +1,9 @@
 .some-work {
   @extend %section-default;
 
+  --container-limit: auto;
+  --container-align-items: center;
+
   --p-margin: #{rem(20) 0 0};
   --p-font-weight: 600;
   --p-font-size: #{rem(23)};
@@ -8,16 +11,8 @@
   display: flex;
   justify-content: center;
 
-  text-align: center;
-
   &__wrap {
-    padding: rem(70) 12.5vw rem(50);
-
-    border: rem(8) solid #8235ff36;
-    border-radius: $radiusLargeHard;
-    box-shadow: $sh-card-primary;
-
-    background: #13003899; // $quaternary;
+    @extend %card;
   }
 
   &__list {

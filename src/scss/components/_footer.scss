@@ -1,4 +1,6 @@
 .footer {
+  @extend %fix-fill-on-scroll-down;
+
   --container-flex-flow: row wrap;
   --container-justify-content: space-between;
 

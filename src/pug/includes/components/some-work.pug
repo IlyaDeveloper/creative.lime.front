@@ -43,19 +43,20 @@
           SOME_WORK_TEXT = "Only $100 per video"
 
 section.some-work
-  .some-work__wrap
-    h2.caption=SOME_WORK_TITLE
+  .container
+    .some-work__wrap
+      h2.caption=SOME_WORK_TITLE
 
-    .some-work__list
-      each item in SOME_WORK__ITEMS
-        a.some-work__item(href=item.link, data-case-name=item.name)
-          if (item.poster === null || item.poster === '')
-            video()
-              source
-          if (item.video === null || item.video === '')
-            picture
-              img(src=assetsImgPath + item.poster)
+      .some-work__list
+        each item in SOME_WORK__ITEMS
+          a.some-work__item(href=item.link, data-case-name=item.name)
+            if (item.poster === null || item.poster === '')
+              video()
+                source
+            if (item.video === null || item.video === '')
+              picture
+                img(src=assetsImgPath + item.poster)
 
-    +button(null, SOME_WORK_BUTTON, null, null)
+      +button(null, SOME_WORK_BUTTON, null, null)
 
-    p=SOME_WORK_TEXT
+      p=SOME_WORK_TEXT

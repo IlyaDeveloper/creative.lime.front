@@ -1,8 +1,12 @@
 .tusted {
   @extend %section-default;
 
+  --animation-delay: 1s;
+  --amination-transform-start: #{translate(0, 100%)};
+
   --container-align-items: center;
   --container-gap: #{rem(40)};
+  --p-font-size: #{rem(27)};
 
   font-family: $font-family-secondary;
   font-weight: 400;
@@ -10,8 +14,13 @@
   text-align: center;
   color: $secondary-dark;
 
-  border-radius: $radiusLargeHard;
+  border-radius: 0 0 $radiusLargeHard $radiusLargeHard;
   background: $primary;
+  box-shadow: 0 -12vh 4vh 4vh $primary;
+  opacity: 0;
+  //box-shadow: 0 0 0 rem(12)  rgba(#E1F500, 0.4),  0 0 0 rem(24)  rgba(#E1F500, 0.4), 0 0 0 rem(36)  rgba(#E1F500, 0.4);
+
+  animation: $animation;
 
   &__logos {
     display: flex;
