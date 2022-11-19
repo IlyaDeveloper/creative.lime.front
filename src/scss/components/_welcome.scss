@@ -44,6 +44,11 @@
   }
 
   &__video {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 18.6vw; //rem(283)
     height: 27vw; //rem(405)
     //height: max-content;
@@ -61,11 +66,16 @@
     &:last-child {
       margin: 0 0 $welcome-video-offset;
 
-
       border-color: $secondary;
 
       transform: scale(0.85);
     }
 
+    video {
+      position: absolute;
+      inset: 0 auto 0;
+
+      height: 100%;
+    }
   }
 }
