@@ -10,6 +10,7 @@
   text-align: center;
   color: $secondary-dark;
 
+  border-radius: $radiusLargeHard;
   background: $primary;
 
   &__logos {
@@ -18,5 +19,4 @@
     justify-content: center;
     gap: 10vw;
   }
-
 }

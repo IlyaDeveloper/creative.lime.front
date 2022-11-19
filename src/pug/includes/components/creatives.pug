@@ -1,10 +1,17 @@
+-
+  var
+          CREATIVES_TITLE = "You can’t afford to have average ad creatives",
+          CREATIVES_TEXT = "E-com is booming!<br>You have competition raising the CPM,<br>IOS 14 crushed detailed targetting,<br> so the only option you have left is getting creatives <strong>that convert</strong>.",
+          CREATIVES_BUTTON = "Let’s level up your e-com brand",
+          CREATIVES_TEXT_DOWN = "Only $100 per video"
+
 section.creatives
-  .container
-    h2 You can’t afford to have average  ad creatives
+  .creatives__wrap
+    h2.caption=CREATIVES_TITLE
 
-    mark 🙅
+    mark.creatives__icon 🙅
 
-    p E-com is booming!  You have competition raising the CPM, IOS 14 crushed detailed targetting, so the only option you have left is getting creatives that convert.
+    p!=CREATIVES_TEXT
 
-    +button(null, 'Let’s level up your e-com brand', null, null)
-    span Only $100 per video
+    +button(null, CREATIVES_BUTTON, null, null)
+    span=CREATIVES_TEXT_DOWN

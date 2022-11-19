@@ -1,7 +1,10 @@
 .caption {
   @extend %h1;
 
+  max-width: var(--caption-max, unset);
+
   margin: var(--caption-margin, unset);
+
   font-family: var(--caption-font, $font-family-secondary);
   font-weight: var(--caption-wight, 400);
   color: var(--caption-color, currentColor);

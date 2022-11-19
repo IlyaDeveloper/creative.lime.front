@@ -1,3 +1,51 @@
-.brands{
+.brands {
+  --container-align-items: center;
+  --container-limit: calc(#{rem(991)} + (var(--container-gutter) * 2));
 
+  text-align: center;
+
+  &__group {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    justify-items: center;
+    width: 100%;
+
+    min-height: rem(496);
+
+    margin: rem(76) 0 0;
+  }
+
+  &__area {
+    width: 16vw;
+    min-width: rem(280);
+
+    &, & > * {
+      display: grid;
+      grid-auto-rows: var(--brands-area-rows);
+    }
+
+    & > * {
+      align-items: center;
+
+      padding: rem(30) rem(12);
+      font-size: rem(20);
+    }
+
+    &:first-child {
+      --brands-area-rows: 2fr 1fr max-content;
+    }
+
+    &:last-child {
+      --brands-area-rows: 1fr 2fr max-content;
+    }
+
+    &-high {
+      color: $dark;
+      background: $primary;
+    }
+
+    &-low {
+      background: $secondary;
+    }
+  }
 }

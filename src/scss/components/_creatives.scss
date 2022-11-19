@@ -1,3 +1,42 @@
-.creatives{
+.creatives {
+  @extend %section-default;
+
+  --container-align-items: center;
+  --caption-max: #{rem(795)};
+
+  --p-max-width: #{rem(1000)};
+  --p-font-size: #{rem(30)};
+  --p-margin: #{rem(30) 0};
+
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+
+  &__wrap {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: rem(20);
+
+    padding: rem(70) 12.5vw rem(50);
+
+    border: rem(8) solid #8235ff36;
+    border-radius: $radiusLargeHard;
+    box-shadow: $sh-card-primary;
+
+    background: #13003899; // $quaternary;
+  }
+
+  &__icon {
+    margin-top: rem(30);
+
+    font-size: rem(125);
+    line-height: 1;
+  }
+
+  strong {
+    color: $primary;
+  }
 
 }
