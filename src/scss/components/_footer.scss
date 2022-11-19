@@ -1,12 +1,19 @@
 .footer {
-  @extend %fix-fill-on-scroll-down;
+  //@extend %fix-fill-on-scroll-down;
 
   --container-flex-flow: row wrap;
   --container-justify-content: space-between;
 
   --link-hover-color: #{$tertiary};
+  position: fixed;
+  inset: auto 0 0 ;
 
-  padding: $gutter 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  //padding: $gutter 0;
+  height: rem(58);
 
   color: $secondary-dark;
   font-size: rem(14);

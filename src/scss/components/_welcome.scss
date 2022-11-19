@@ -22,7 +22,7 @@
 
   text-align: center;
 
-  background: $secondary-dark;
+  background: var(--main-bg);
 
   animation: $animation;
 
@@ -60,10 +60,12 @@
 
     background: transparent;
 
+    box-shadow: $sh-card-primary;
+
     overflow: hidden;
 
     &:last-child {
-      --amination-transform-start: #{translate(20vw, 0) scale(0)};
+      --amination-transform-start: #{translate(20vw, 0) scale(0) rotate(-40deg)};
 
       display: var(--welcome-video-display-last, none);
 
@@ -104,7 +106,7 @@
 
     &__video {
       //--amination-opacity-start: #{0};
-      --amination-transform-start: #{translate(-20vw, 0) scale(0)};
+      --amination-transform-start: #{translate(-20vw, 0) scale(0) rotate(40deg)};
 
       width: 18.6vw; //rem(283)
       height: 27vw; //rem(405)

@@ -1,8 +1,10 @@
 .layout {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   background: var(--main-bg);
 
   overflow: hidden;
+
+  margin-bottom: rem(500);
 }

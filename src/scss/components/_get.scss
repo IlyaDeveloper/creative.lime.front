@@ -12,6 +12,9 @@
   --p-font-size: #{rem(31)};
   --p-font-weight: 600;
 
+  position: fixed;
+  inset: auto 0 rem(58);
+
   color: $dark;
   background: $primary;
 

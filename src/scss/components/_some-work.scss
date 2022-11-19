@@ -48,33 +48,47 @@
     @include only-mouse {
       &:after {
         position: absolute;
-        inset: auto 0 0 0;
+        inset: auto auto rem(24)  rem(24);
         z-index: 1;
 
         display: inline-flex;
-        align-items: end;
-        min-height: 80%;
+        align-items: center;
+        justify-content: center;
+        //min-height: 80%;
 
-        padding: $gutterX2;
+        padding: rem(8) $gutter;
 
         content: attr(data-case-name);
 
         font-family: $font-family-secondary;
-        font-size: rem(28);
+        font-size: rem(20);
+        line-height: 1;
+        //writing-mode: vertical-lr;
+        //
+        //text-orientation: mixed;
+        text-align: center;
         color: $secondary-dark;
 
         opacity: var(--some-work-item-after-opacity, 0);
-        transform: translateY(var(--some-work-item-after-translate, 100%));
+        transform: translateY(var(--some-work-item-after-translate, -10%));
         transition: $transition-default;
         transition-property: opacity, transform;
 
-        background: linear-gradient(0deg, rgba(#E1F500, 1) 0%, rgba(255, 255, 255, 0) 100%);
+
+        border-radius: rem(12);
+        background: rgba(#E1F500, .9) ;
+        box-shadow: $sh-card-primary;
+
+        //background: linear-gradient(to bottom, rgba(#E1F500, 1) 0%, rgba(255, 255, 255, 0) 100%);
       }
 
       &:hover {
         --some-work-item-after-opacity: 1;
         --some-work-item-after-translate: 0;
+
         border-color: transparent;
+
+        transform: scale(1.05);
       }
     }
   }
