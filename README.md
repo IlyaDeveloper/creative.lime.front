@@ -45,17 +45,3 @@
 - First to do this, you need start localhost server, just simple i your terminal run next command:
   $ npm run start
 - Then open in you browser [localhost](http://localhost:1234/)
-
-## Importing templates
-The project has added the ability to use import of ready-made templates, this allows not to create duplicate components.
-Using import is quite easy, here is an example:
-> some component `src/html/includes/components/header.html` and for use anywhere, use:
-```
-   <include src="components/header.html"></include>
-```
-Also when importing it is possible to use variables or expressions, more details [posthtml-expressions](https://github.com/posthtml/posthtml-expressions) and [posthtml-include](https://github.com/posthtml/posthtml-include), here is an example of usage:
-> component `src/html/includes/components/header.html` has parameters such as `headerClassName, logoVersion, headerRightShow`, which we can change during import:
-```
-   <include src="components/header.html" locals='{"headerClassName" : "--compact"}'></include>
-```
-> In this case, the parameters `logoVersion, headerRightShow` were not used, so they were with the default parameter that was created in `.posthtmlrc`
