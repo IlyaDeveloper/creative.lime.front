@@ -18,6 +18,9 @@
     width: 16vw;
     min-width: rem(280);
 
+    border-radius: var(--brands-area-radius);
+    overflow: hidden;
+
     &, & > * {
       display: grid;
       grid-auto-rows: var(--brands-area-rows);
@@ -45,6 +48,8 @@
     }
 
     &:not(&.--left, &.--right) {
+      padding: rem(40) 0;
+
       .brands__area-last {
         display: var(--brand-area-last-display, none);
 
@@ -65,8 +70,11 @@
   }
 
   @include max-wide(laptop) {
+    --caption-max: #{rem(320)};
+
     --brand-area-lr-last-display: none;
     --brand-area-last-display: grid;
+    --brands-area-radius: #{$radius};
   }
 
   @include min-wide(laptop) {

@@ -114,4 +114,8 @@
       animation: $animation;
     }
   }
+
+  @media (max-height: 580px) {
+    min-height: rem(580);
+  }
 }

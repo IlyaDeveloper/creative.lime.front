@@ -79,7 +79,7 @@
     }
   }
 
-  @include max-wide(phonesLg) {
+  @include max-wide(tablet) {
     --container-gutter: 0;
   }
 

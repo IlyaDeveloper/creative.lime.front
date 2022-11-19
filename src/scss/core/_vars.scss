@@ -27,6 +27,11 @@ $contentScale: (
     direction: 'max-width',
     wide: screens(phonesSm),
     scale: 88%
+  ),
+  (
+    direction: 'max-height',
+    wide: screens(phonesLg),
+    scale: 68%
   )
 );
 
@@ -55,7 +60,7 @@ $containerOffset: calc(var(--container-gutter) * -1);
 //$radiusSmall: rem(10);
 $radius: rem(20);
 $radiusLarge: rem(28);
-$radiusLargeHard: rem(48);
+$radiusLargeHard: rem(60);
 
 $themes-map: (
   default:(

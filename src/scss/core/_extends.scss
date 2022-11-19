@@ -51,21 +51,30 @@
 
   background: #13003899; // $quaternary;
 
-  @include max-wide(phonesLg) {
+  @include max-wide(tablet) {
+    width: 100%;
+
     padding: rem(70) 9.5vw rem(50);
+
+    border-left: none;
+    border-right: none;
   }
 
-  @include min-wide(phonesLg) {
+  @include min-wide(tablet) {
     border-radius: $radiusLargeHard;
   }
 }
 
 %caption-large {
   font-size: var(--h1-size, rem(70));
-  line-height: var(--h1-height, 112%);
+  //line-height: var(--h1-height, 112%);
   //font-weight: var(--h1-weight, 400);
 
-  @include max-wide(phones) {
+  @include max-wide(desktop) {
+    font-size: var(--h1-size, rem(48));
+  }
+
+  @include max-wide(tablet) {
     font-size: var(--h1-size, rem(34));
     //line-height: var(--h1-height, 112%);
   }
@@ -76,7 +85,11 @@
   //line-height: var(--h1-height, rem(60));
   //font-weight: var(--h1-weight, 400);
 
-  @include max-wide(phones) {
+  @include max-wide(desktop) {
+    font-size: var(--h1-size, rem(42));
+  }
+
+  @include max-wide(tablet) {
     font-size: var(--h1-size, rem(30));
   }
 }
@@ -86,7 +99,11 @@
   //line-height: var(--h1-height, rem(42));
   //font-weight: var(--h2-weight, 400);
 
-  @include max-wide(phones) {
+  @include max-wide(desktop) {
+    font-size: var(--h1-size, rem(30));
+  }
+
+  @include max-wide(tablet) {
     font-size: var(--h2-size, rem(22));
   }
 }

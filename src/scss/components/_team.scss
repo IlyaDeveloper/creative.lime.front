@@ -3,6 +3,8 @@
 
   --container-flex-flow: row wrap;
   --container-align-items: strech;
+  //--container-align-items: center;
+  --container-justify-content: center;
   --container-gap: #{rem(100)};
   --container-limit: calc(#{rem(780)} + var(--container-gutter));
 
@@ -39,6 +41,7 @@
     grid-auto-rows: max-content auto;
     gap: rem(8);
 
+    min-width: rem(260);
     height: 100%;
 
     margin: rem(16) 0 0;
@@ -58,7 +61,7 @@
     font-size: rem(27);
   }
 
-  @include max-wide(phones) {
+  @include max-wide(tablet) {
     --container-gap: #{rem(53)};
     --team-pics-justify: center;
     --team-map-margin-left: #{rem(-23)}

@@ -28,7 +28,7 @@
     color: $primary;
   }
 
-  @include max-wide(phonesLg) {
+  @include max-wide(tablet) {
     --container-gutter: 0;
 
     --p-margin: #{0 0 $gutter};
@@ -38,7 +38,7 @@
     }
   }
 
-  @include min-wide(phonesLg) {
+  @include min-wide(tablet) {
     --p-font-size: #{rem(30)};
     --p-margin: #{rem(30) 0};
   }
