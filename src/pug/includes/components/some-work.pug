@@ -3,40 +3,40 @@
           SOME_WORK_TITLE = "Some of our work",
           SOME_WORK__ITEMS = [
             {
-              name: 'Some name',
+              name: 'Cass',
               video: null,
               poster: 'case-cass.webp',
-              link: ""
+              link: "/case/cass"
             },
             {
-              name: 'Some name',
+              name: 'Express',
               video: null,
               poster: 'case-express.webp',
-              link: ""
+              link: "/case/express"
             },
             {
-              name: 'Some name',
+              name: 'Slh',
               video: null,
               poster: 'case-slh.webp',
-              link: ""
+              link: "/case/slh"
             },
             {
-              name: 'Some name',
+              name: 'Slh',
               video: null,
               poster: 'case-slh.webp',
-              link: ""
+              link: "/case/slh"
             },
             {
-              name: 'Some name',
+              name: 'Cass',
               video: null,
               poster: 'case-cass.webp',
-              link: ""
+              link: "/case/cass"
             },
             {
-              name: 'Some name',
+              name: 'Express',
               video: null,
               poster: 'case-express.webp',
-              link: ""
+              link: "/case/express"
             }
           ],
           SOME_WORK_BUTTON = "Let’s level up your e-com brand",
@@ -51,11 +51,13 @@ section.some-work
         each item in SOME_WORK__ITEMS
           a.some-work__item(href=item.link, data-case-name=item.name)
             if (item.poster === null || item.poster === '')
-              video()
-                source
+              video(preload="metadate"
+                playsinline autoplay muted loop controls=false
+                poster="https://www.limecreative.com/wp-content/themes/lime/img/services-header.jpg")
+                source(src="https://www.limecreative.com/wp-content/themes/lime/img/videos/about-video.mp4" type="video/mp4")
             if (item.video === null || item.video === '')
               picture
-                img(src=assetsImgPath + item.poster)
+                img(src=assetsImgPath + item.poster, alt='Creative lime case' + item.name)
 
       +button(null, SOME_WORK_BUTTON, null, null)
 

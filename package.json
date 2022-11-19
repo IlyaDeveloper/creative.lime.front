@@ -59,7 +59,7 @@
     "caniuse-lite": "^1.0.30001431"
   },
   "parcelIgnore": [
-    "poster.jpeg"
+    "poster.jpg"
   ],
   "parcel-namer-rewrite": {
     "hashing": "always",

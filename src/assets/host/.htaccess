@@ -26,5 +26,5 @@ RewriteRule (.*) /$1.html
 
 # Force 404
 #RewriteRule ^ - [R=404,L]
-ErrorDocument 404 https://creativelime.justtwic.art/404
-ErrorDocument 500 https://creativelime.justtwic.art
+ErrorDocument 404 https://lime.justtwic.art/404
+ErrorDocument 500 https://lime.justtwic.art

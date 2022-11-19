@@ -2,7 +2,7 @@
   @extend %section-default;
 
   --animation-delay: 1s;
-  --amination-transform-start: #{translate(0, 100%)};
+  --amination-transform-start: #{translate(0, -100%)};
 
   --container-align-items: center;
   --container-gap: #{rem(40)};

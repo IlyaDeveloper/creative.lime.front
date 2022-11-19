@@ -34,16 +34,19 @@
 
   @include only-mouse {
     transition: .5s linear;
-    transition-property: background-color, border-color, color, opacity, transform;
+    transition-property: background-color, border-color, color, opacity, transform, box-shadow;
     cursor: pointer;
+
 
     &:hover {
       --button-fill: var(--button-fill-hover, #{$primary});
       --button-color: var(--button-color-hover, #{$secondary-dark});
-      --link-hover-color: var(--button-color);
-
-      --link-round-arrow-transform: rotate(-180deg) scale(0.8);
       --button-before-opacity: 1;
+
+      --link-hover-color: var(--button-color);
+      --link-round-arrow-transform: rotate(-180deg) scale(0.8);
+
+      box-shadow: 0 0 0 rem(4) $secondary-dark;
     }
 
     &:active {

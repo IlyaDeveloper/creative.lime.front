@@ -1,4 +1,7 @@
 .layout {
+  position: relative;
+  z-index: 1;
+
   background: var(--main-bg);
 
   overflow: hidden;
