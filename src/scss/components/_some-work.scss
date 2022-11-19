@@ -1,2 +1,88 @@
 .some-work {
+  @extend %section-default;
+
+  --p-margin: #{rem(20) 0 0};
+  --p-font-weight: 600;
+  --p-font-size: #{rem(23)};
+
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+
+  &__wrap {
+    padding: rem(70) 12.5vw rem(50);
+
+    border: rem(8) solid #8235ff36;
+    border-radius: $radiusLargeHard;
+    box-shadow: $sh-card-primary;
+
+    background: #13003899; // $quaternary;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+    gap: rem(24) rem(55);
+
+    width: 100%;
+    max-width: rem(960);
+
+    margin: $gutterX3 auto rem(60);
+  }
+
+  &__item {
+    position: relative;
+
+    aspect-ratio: 2 / 3;
+
+    border: rem(3) solid $primary;
+    border-radius: $radiusLarge;
+    background: transparent;
+    overflow: hidden;
+
+    transition: $transition-default;
+    cursor: pointer;
+
+    img {
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @include only-mouse {
+      &:after {
+        position: absolute;
+        inset: auto 0 0 0;
+        z-index: 1;
+
+        display: inline-flex;
+        align-items: end;
+        min-height: 80%;
+
+        padding: $gutterX2;
+
+        content: attr(data-case-name);
+
+        font-family: $font-family-secondary;
+        font-size: rem(28);
+        color: $secondary-dark;
+
+        opacity: var(--some-work-item-after-opacity, 0);
+        transform: translateY(var(--some-work-item-after-translate, 100%));
+        transition: $transition-default;
+        transition-property: opacity, transform;
+
+        background: linear-gradient(0deg, rgba(#E1F500, 1) 0%, rgba(255, 255, 255, 0) 100%);
+      }
+
+      &:hover {
+        --some-work-item-after-opacity: 1;
+        --some-work-item-after-translate: 0;
+        border-color: transparent;
+      }
+    }
+
+  }
 }

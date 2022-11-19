@@ -1,6 +1,61 @@
+-
+  var
+          SOME_WORK_TITLE = "Some of our work",
+          SOME_WORK__ITEMS = [
+            {
+              name: 'Some name',
+              video: null,
+              poster: 'case-cass.webp',
+              link: ""
+            },
+            {
+              name: 'Some name',
+              video: null,
+              poster: 'case-express.webp',
+              link: ""
+            },
+            {
+              name: 'Some name',
+              video: null,
+              poster: 'case-slh.webp',
+              link: ""
+            },
+            {
+              name: 'Some name',
+              video: null,
+              poster: 'case-slh.webp',
+              link: ""
+            },
+            {
+              name: 'Some name',
+              video: null,
+              poster: 'case-cass.webp',
+              link: ""
+            },
+            {
+              name: 'Some name',
+              video: null,
+              poster: 'case-express.webp',
+              link: ""
+            }
+          ],
+          SOME_WORK_BUTTON = "Let’s level up your e-com brand",
+          SOME_WORK_TEXT = "Only $100 per video"
+
 section.some-work
-  .container
-    h2 Some of our work
+  .some-work__wrap
+    h2.caption=SOME_WORK_TITLE
 
     .some-work__list
-      atrice.some-work__item
+      each item in SOME_WORK__ITEMS
+        a.some-work__item(href=item.link, data-case-name=item.name)
+          if (item.poster === null || item.poster === '')
+            video()
+              source
+          if (item.video === null || item.video === '')
+            picture
+              img(src=assetsImgPath + item.poster)
+
+    +button(null, SOME_WORK_BUTTON, null, null)
+
+    p=SOME_WORK_TEXT

@@ -50,7 +50,7 @@ $containerOffset: calc(var(--container-gutter) * -1);
 //$radiusSmall: rem(10);
 $radius: rem(20);
 $radiusLarge: rem(28);
-//$radiusLargeHard: rem(48);
+$radiusLargeHard: rem(48);
 
 $themes-map: (
   default:(
@@ -71,8 +71,8 @@ $primary: var(--cl-primary);
 $secondary: var(--cl-secondary);
 $secondary-dark: var(--cl-secondary-dark);
 
-$tertiary: var(--tertiary);
-$quaternary: var(--tertiary);
+$tertiary: var(--cl-tertiary);
+$quaternary: var(--cl-quaternary);
 
 $light: var(--cl-light);
 $dark: var(--cl-dark);
@@ -109,8 +109,8 @@ $font-family-system: $font-family-primary, $font-family-secondary, -apple-system
 
 // * shadows
 //$sh-card-primary: var(--sh-card-primary, 0 rem(10) rem(24) rem(-1) var(--cl-secondary-dark-10));
-$sh-card-primary: var(--sh-card-primary, #{0 0 rem(6) 0 var(--cl-secondary)});
-$sh-card-forty: 0 0 rem(40) 0 rgba(0, 0, 0, 0.08);
+$sh-card-primary: var(--sh-card-primary, #{0 rem(10) rem(180) rem(-100) $dark});
+
 
 //* Icons
 $font-path: '../assets/fonts' !default;

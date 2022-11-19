@@ -10,6 +10,7 @@
 
   padding: var(--button-gutter-y, rem(10)) var(--button-gutter-x, rem(24));
 
+  font-family: $font-family-secondary;
   font-weight: bold;
   font-size: var(--button-size, rem(23));
   color: var(--button-color, $light);
