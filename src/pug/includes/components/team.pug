@@ -1,5 +1,6 @@
 -
   var
+          TEAM_TITLE = "Your own creative team <span>for a fraction of the price</span>",
           TEAM_LIST = [
             {
               name: "Creative Directors",
@@ -7,11 +8,13 @@
               pictures: [
                 {
                   src: 'team-3.webp',
-                  into: 'team-3.webp'
+                  into: 'team-3.webp',
+                  customClass: null
                 },
                 {
                   src: 'team.webp',
-                  into: 'team.webp'
+                  into: 'team.webp',
+                  customClass: null
                 },
               ]
             },
@@ -21,11 +24,13 @@
               pictures: [
                 {
                   src: 'team-4.webp',
-                  into: 'team-4.webp'
+                  into: 'team-4.webp',
+                  customClass: null
                 },
                 {
                   src: 'team-1.webp',
-                  into: 'team-1.webp'
+                  into: 'team-1.webp',
+                  customClass: null
                 }
               ]
             },
@@ -35,11 +40,13 @@
               pictures: [
                 {
                   src: 'team-5.webp',
-                  into: 'team-5.webp'
+                  into: 'team-5.webp',
+                  customClass: null
                 },
                 {
                   src: 'team-2.webp',
-                  into: 'team-2.webp'
+                  into: 'team-2.webp',
+                  customClass: null
                 }
               ]
             },
@@ -49,22 +56,22 @@
               pictures: [
                 {
                   src: 'map.svg',
-                  into: 'map.webp'
-                }]
+                  into: 'map.webp',
+                  customClass: "--map"
+                }
+              ]
             },
           ]
 
 section.team
   .container
-    h2 Your own creative team  for a fraction of the price
-
+    h2.caption!=TEAM_TITLE
     each item in TEAM_LIST
       article.team__item
-        figure.team__item-pics
+        figure.team__pics
           each pic in item.pictures
-            picture.team__item-ava
+            picture.team__ava(class=pic.customClass)
               img(src=assetsImgPath + pic.src, alt=pic.into)
-        h2=item.name
-        p=item.description
-
-
+        .team__card
+          h2.team__name=item.name
+          p=item.description

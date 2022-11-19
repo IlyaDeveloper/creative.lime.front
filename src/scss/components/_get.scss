@@ -1,3 +1,15 @@
 .get {
+  @extend %section-default;
 
+  --container-flex-flow: row wrap;
+  --container-justify-content: space-between;
+  --caption-color: #{$secondary};
+  --caption-max: #{rem(870)};
+
+  --p-margin: #{rem(20) 0 0};
+  --p-font-size: #{rem(31)};
+  --p-font-weight: 600;
+
+  color: $dark;
+  background: $primary;
 }

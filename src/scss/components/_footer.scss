@@ -1,2 +1,15 @@
 .footer {
+  --container-flex-flow: row wrap;
+  --container-justify-content: space-between;
+
+  --link-hover-color: #{$tertiary};
+
+  padding: $gutter 0;
+
+  color: $secondary-dark;
+  font-size: rem(14);
+
+  border-top: rem(1) solid currentColor;
+  background: $primary;
+
 }

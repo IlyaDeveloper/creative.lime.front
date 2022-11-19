@@ -1,3 +1,59 @@
-.team{
+.team {
+  @extend %section-default;
 
+  --container-flex-flow: row wrap;
+  --container-align-items: strech;
+  --container-gap: #{rem(100)};
+  --container-limit: calc(#{rem(780)} + var(--container-gutter));
+
+  --caption-max: #{100%};
+  --caption-inset-color: #{$primary};
+
+  &__item {
+    display: flex;
+    flex-flow: column;
+    flex: 1 0;
+    //min-width: rem(340);
+  }
+
+  &__pics {
+    display: inline-grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-auto-columns: rem(98);
+    grid-gap: rem(23);
+
+    grid-auto-rows: rem(98);
+  }
+
+  &__ava {
+    &.--map {
+      min-width: rem(150);
+    }
+  }
+
+  &__card {
+    display: inline-grid;
+    grid-auto-rows: max-content auto;
+    gap: rem(20);
+
+    height: 100%;
+
+    margin: rem(16) 0 0;
+    padding: rem(28);
+
+    font-weight: 400;
+    font-size: rem(22);
+    //line-height: 26px;
+
+    border: rem(3) solid $primary;
+    border-radius: $radiusLarge;
+    background: $tertiary;
+
+  }
+
+  &__name {
+    font-family: $font-family-secondary;
+    font-size: rem(27);
+  }
 }

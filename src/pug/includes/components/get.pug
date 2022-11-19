@@ -1,6 +1,11 @@
+-
+  var
+          GET_TITLE = "Get your own creative team for a fraction of the price",
+          GET_TEXT = "starting from $100 per UGC Video",
+          GET_BUTTON = "Let’s level up your e-com brand"
+
 section.get
   .container
-    h2(class="caption --large") Get your own creative team for a fraction of the price
-    p starting from $100 per UGC Video
-    +button(null, 'Let’s level up your e-com brand', null, null)
-
+    h2(class="caption --large")=GET_TITLE
+    p.get__text=GET_TEXT
+    +button(null, GET_BUTTON, null, null)
