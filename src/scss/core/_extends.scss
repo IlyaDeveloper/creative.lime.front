@@ -1,6 +1,10 @@
 
 %section-default {
   padding: calc(#{$gutterX3} + #{$gutterX2}) 0;
+
+  @include max-wide(phonesLg) {
+    padding: calc(#{$gutterX3}) 0;
+  }
 }
 
 %section-limit {
@@ -42,28 +46,49 @@
   text-align: center;
 
   border: rem(8) solid #8235ff36;
-  border-radius: $radiusLargeHard;
+
   box-shadow: $sh-card-primary;
 
   background: #13003899; // $quaternary;
+
+  @include max-wide(phonesLg) {
+    padding: rem(70) 9.5vw rem(50);
+  }
+
+  @include min-wide(phonesLg) {
+    border-radius: $radiusLargeHard;
+  }
 }
 
 %caption-large {
   font-size: var(--h1-size, rem(70));
   line-height: var(--h1-height, 112%);
   //font-weight: var(--h1-weight, 400);
+
+  @include max-wide(phones) {
+    font-size: var(--h1-size, rem(34));
+    //line-height: var(--h1-height, 112%);
+  }
 }
 
 %h1 {
   font-size: var(--h1-size, rem(50));
-  line-height: var(--h1-height, rem(60));
+  //line-height: var(--h1-height, rem(60));
   //font-weight: var(--h1-weight, 400);
+
+  @include max-wide(phones) {
+    font-size: var(--h1-size, rem(30));
+  }
 }
 
 %h2 {
   font-size: var(--h2-size, rem(35));
-  line-height: var(--h1-height, rem(42));
+  //line-height: var(--h1-height, rem(42));
   //font-weight: var(--h2-weight, 400);
+
+  @include max-wide(phones) {
+    font-size: var(--h2-size, rem(22));
+  }
 }
 
 //%h3 {
@@ -87,9 +112,11 @@
 //}
 
 %text-large-title {
-  font-size: rem(30);
-  line-height: rem(45);
-  font-weight: 400;
+  @include min-wide(tablet) {
+    font-size: rem(30);
+    //line-height: rem(45);
+    font-weight: 400;
+  }
 }
 
 //%text-large {

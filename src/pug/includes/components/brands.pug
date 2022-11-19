@@ -6,22 +6,24 @@
           BRANDS_AREA_PURCHASES = "100 purchases",
           BRANDS_AREA_RIGHT_HIGH = "Average creatives",
           BRANDS_AREA_RIGHT_LOW = "Very high cost per<br>purchase",
-          BRANDS_AREA_CENTER = "For the same amount of purchases"
+          BRANDS_AREA_CENTER = "For the same amount of purchases",
+          BRANDS_AREA_MOBILE = "VS"
 
 section.brands
   .container
     h2.caption=BRANDS_TITLE
 
     .brands__group
-      article(class="brands__area")
+      article(class="brands__area --left")
         strong.brands__area-high!=BRANDS_AREA_LEFT_HIGH
         strong.brands__area-low!=BRANDS_AREA_LEFT_LOW
-        span=BRANDS_AREA_PURCHASES
+        span.brands__area-last=BRANDS_AREA_PURCHASES
 
       article.brands__area
+        strong.brands__area-last=BRANDS_AREA_MOBILE
         strong=BRANDS_AREA_CENTER
 
-      article(class="brands__area")
+      article(class="brands__area  --right")
         strong.brands__area-high=BRANDS_AREA_RIGHT_HIGH
         strong.brands__area-low!=BRANDS_AREA_RIGHT_LOW
-        span=BRANDS_AREA_PURCHASES
+        span.brands__area-last=BRANDS_AREA_PURCHASES

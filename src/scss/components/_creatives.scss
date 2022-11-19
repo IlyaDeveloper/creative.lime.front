@@ -7,8 +7,8 @@
   --caption-max: #{rem(795)};
 
   --p-max-width: #{rem(1000)};
-  --p-font-size: #{rem(30)};
-  --p-margin: #{rem(30) 0};
+  //--p-font-size: #{rem(30)};
+  //--p-margin: #{rem(30) 0};
 
   display: flex;
   justify-content: center;
@@ -27,4 +27,20 @@
   strong {
     color: $primary;
   }
+
+  @include max-wide(phonesLg) {
+    --container-gutter: 0;
+
+    --p-margin: #{0 0 $gutter};
+
+    .button {
+      margin: auto rem(-24);
+    }
+  }
+
+  @include min-wide(phonesLg) {
+    --p-font-size: #{rem(30)};
+    --p-margin: #{rem(30) 0};
+  }
+
 }

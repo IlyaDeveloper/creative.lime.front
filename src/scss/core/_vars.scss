@@ -18,11 +18,16 @@ $wideScreens: (
 );
 
 $contentScale: (
-  //(
-  //  direction: 'max-width',
-  //  wide: 1460px,
-  //  scale: 94%
-  //)
+  (
+    direction: 'max-width',
+    wide: screens(desktopSm),
+    scale: 94%
+  ),
+  (
+    direction: 'max-width',
+    wide: screens(phonesSm),
+    scale: 88%
+  )
 );
 
 //* Main content && elements sizes
@@ -123,11 +128,11 @@ $icons-font-map: (
 );
 
 //* Scrolls
-$scroll-size: var(--scroll-size, rem(5));
-$scroll-border-radius: 0;
+$scroll-size: var(--scroll-size, rem(6));
+$scroll-border-radius: rem(3);
 $scroll-thumb-color: $primary;
-$scroll-thumb-hover-color: $secondary;
-$scroll-track-color: $light;
+$scroll-thumb-hover-color: $tertiary;
+$scroll-track-color: transparant;
 $scroll-track-line: inset 0 0 0 0px $scroll-track-color;
 
 //* cursor

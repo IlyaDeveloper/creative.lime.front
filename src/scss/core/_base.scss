@@ -27,6 +27,10 @@ html {
 
   scroll-behavior: smooth;
 
+  &.--custom-scroll {
+    @include scroll-small;
+  }
+
   @include content-scale($contentScale);
 }
 
@@ -42,6 +46,10 @@ body {
   background: var(--main-bg);
 
   cursor: default;
+
+  @include min-wide(tablet) {
+    font-size: rem(20);
+  }
 }
 
 a {

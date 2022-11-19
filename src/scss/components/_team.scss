@@ -20,16 +20,17 @@
   &__pics {
     display: inline-grid;
     grid-auto-flow: column;
-    align-items: center;
     grid-auto-columns: rem(98);
-    grid-gap: rem(23);
-
     grid-auto-rows: rem(98);
+    grid-gap: $gutterX2;
+    align-items: center;
+    justify-content: var(--team-pics-justify, unset);
   }
 
   &__ava {
     &.--map {
       min-width: rem(150);
+      margin-left: var(--team-map-margin-left, 0);
     }
   }
 
@@ -50,11 +51,16 @@
     border: rem(3) solid $primary;
     border-radius: $radiusLarge;
     background: $tertiary;
-
   }
 
   &__name {
     font-family: $font-family-secondary;
     font-size: rem(27);
+  }
+
+  @include max-wide(phones) {
+    --container-gap: #{rem(53)};
+    --team-pics-justify: center;
+    --team-map-margin-left: #{rem(-23)}
   }
 }

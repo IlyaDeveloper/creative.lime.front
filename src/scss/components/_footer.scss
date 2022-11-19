@@ -14,4 +14,7 @@
   border-top: rem(1) solid currentColor;
   background: $primary;
 
+  @include max-wide(phones) {
+    font-size: rem(12);
+  }
 }

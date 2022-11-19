@@ -7,6 +7,7 @@
 
   font-family: var(--caption-font, $font-family-secondary);
   font-weight: var(--caption-wight, 400);
+  line-height: var(--caption--height, 112%);
   color: var(--caption-color, currentColor);
 
   & > * {

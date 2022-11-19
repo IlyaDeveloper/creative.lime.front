@@ -12,7 +12,7 @@
 
   font-family: $font-family-secondary;
   font-weight: bold;
-  font-size: var(--button-size, rem(23));
+  font-size: var(--button-size, rem(18));
   color: var(--button-color, $light);
 
   touch-action: none;
@@ -49,5 +49,9 @@
     &:active {
       transform: scale(0.85);
     }
+  }
+
+  @include min-wide(phones) {
+    font-size: var(--button-size, rem(23));
   }
 }

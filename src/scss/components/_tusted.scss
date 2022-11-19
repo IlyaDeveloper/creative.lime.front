@@ -14,7 +14,6 @@
   text-align: center;
   color: $secondary-dark;
 
-  border-radius: 0 0 $radiusLargeHard $radiusLargeHard;
   background: $primary;
   box-shadow: 0 -12vh 4vh 4vh $primary;
   opacity: 0;
@@ -27,5 +26,9 @@
     align-items: center;
     justify-content: center;
     gap: 10vw;
+  }
+
+  @include min-wide(phonesLg) {
+    border-radius: 0 0 $radiusLargeHard $radiusLargeHard;
   }
 }

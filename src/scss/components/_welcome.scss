@@ -1,16 +1,15 @@
 .welcome {
   $welcome-video-offset: -24vh;
 
-  --amination-transform-start: #{translate(0, -10%)};
-
   @extend %section-default;
+
+  --amination-transform-start: #{translate(0, -10%)};
 
   --container-align-items: center;
   --container-justify-content: center;
   --container-gap: #{$gutterX2};
 
   --logo-size: #{rem(195)};
-
   --caption-inset-color: #{$primary};
 
   position: relative;
@@ -23,9 +22,7 @@
 
   text-align: center;
 
-  border-radius: 0 0 $radiusLargeHard $radiusLargeHard;
   background: $secondary-dark;
-  box-shadow: 0 rem(10) rem(30) rem(-15) $secondary-dark;
 
   animation: $animation;
 
@@ -41,44 +38,34 @@
   }
 
   &__beck {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-
     display: inherit;
     justify-content: space-between;
     align-items: center;
 
-    padding: 4.5vw;
+    padding: rem(12) 0 rem(60);
   }
 
   &__video {
-    //--amination-opacity-start: #{0};
-    --amination-transform-start: #{translate(-20vw, 0) scale(0)};
-
     position: relative;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 18.6vw; //rem(283)
-    height: 27vw; //rem(405)
-    //height: max-content;
-    //aspect-ratio: 3 / 5;
 
-    margin: $welcome-video-offset 0 0;
+    width: rem(283);
+    height: rem(405);
 
     border: rem(3) solid $primary;
     border-radius: $radiusLarge;
 
     background: transparent;
 
-    animation: $animation;
-
     overflow: hidden;
 
     &:last-child {
       --amination-transform-start: #{translate(20vw, 0) scale(0)};
+
+      display: var(--welcome-video-display-last, none);
 
       margin: 0 0 $welcome-video-offset;
 
@@ -92,6 +79,39 @@
       inset: 0 auto 0;
 
       height: 100%;
+    }
+  }
+
+  @include max-wide(phonesLg) {
+    --container-gap: #{rem(8)};
+
+    padding-top: 14vh;
+  }
+
+  @include min-wide(phonesLg) {
+    border-radius: 0 0 $radiusLargeHard $radiusLargeHard;
+    box-shadow: 0 rem(10) rem(30) rem(-15) $secondary-dark;
+
+    &__beck {
+      --welcome-video-display-last: inline-flex;
+
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+
+      padding: 4.5vw;
+    }
+
+    &__video {
+      //--amination-opacity-start: #{0};
+      --amination-transform-start: #{translate(-20vw, 0) scale(0)};
+
+      width: 18.6vw; //rem(283)
+      height: 27vw; //rem(405)
+
+      margin: $welcome-video-offset 0 0;
+
+      animation: $animation;
     }
   }
 }

@@ -3,13 +3,27 @@
 
   --container-flex-flow: row wrap;
   --container-justify-content: space-between;
+  --container-align-items: center;
+  --container-gap: #{rem(20)};
+
   --caption-color: #{$secondary};
   --caption-max: #{rem(870)};
 
-  --p-margin: #{rem(20) 0 0};
   --p-font-size: #{rem(31)};
   --p-font-weight: 600;
 
   color: $dark;
   background: $primary;
+
+  @include max-wide(phonesLg) {
+    --container-justify-content: center;
+    --container-align-items: center;
+
+    --h1-size: #{rem(27)};
+
+    --p-margin: #{0 0 rem(38)};
+    --p-font-size: none;
+
+    text-align: center;
+  }
 }

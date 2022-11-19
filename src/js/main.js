@@ -16,7 +16,7 @@ const customScroll = () => {
 
 const app = () => {
   resetScroll();
-  customScroll();
+  // customScroll();
 }
 
 window.addEventListener('DOMContentLoaded', () => {
